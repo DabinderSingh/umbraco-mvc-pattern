@@ -1,0 +1,20 @@
+﻿@model ContactForm.Core.Models.ContactFormViewModel
+@using (Html.BeginForm("Index", "ContactForm", FormMethod.Post))
+{
+    <div class="blogpost">
+        <div class="blogpost-meta">
+            @Html.TextBoxFor(m => m.Name)
+        </div>
+        <div class="blogpost-meta">
+            @Html.TextBoxFor(m => m.Email)
+        </div>
+    </div>
+    <div class="blogpost">
+        <div class="blogpost-meta">
+            @Html.TextAreaFor(m => m.Message)
+        </div>
+    </div>
+    <div class="blogpost">
+        <button type="submit" class="button btn-primary"></button>
+    </div>
+}
